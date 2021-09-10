@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>Bootstrap Theme</title>
+  </head>
+  <body>
+    <div class="container">
+      <header id="main-header">
+        <div class="row g-0">
+          <div class="col-lg-4 col-md-5">
+            <img class="w-100 h-100" src="img/person1.jpg" alt="" />
+          </div>
+          <div class="col-lg-8 col-md-7">
+            <div class="d-flex flex-column">
+              <div class="p-5 bg-dark text-white">
+                <div
+                  class="
+                    d-flex
+                    flex-row
+                    justify-content-between
+                    align-items-center
+                  "
+                >
+                  <h1 class="display-4">John Doe</h1>
+                  <div class="d-none d-md-block">
+                    <a href="http://twitter.com" class="text-white">
+                      <i class="bi bi-twitter"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="http://facebook.com" class="text-white">
+                      <i class="bi bi-facebook"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="http://instagram.com" class="text-white">
+                      <i class="bi bi-instagram"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="http://github.com" class="text-white">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 bg-black">
+                Experienced Full Stack Web Developer
+              </div>
+
+              <div>
+                <div
+                  class="
+                    d-flex
+                    flex-row
+                    text-white
+                    align-items-stretch
+                    text-center
+                  "
+                >
+                  <div
+                    class="port-item p-4 bg-primary w-25"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#home"
+                  >
+                    <i class="bi bi-house d-block"></i>
+                    <span class="d-none d-sm-block">Home</span>
+                  </div>
+                  <div
+                    class="port-item p-4 bg-success w-25"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#resume"
+                  >
+                    <i class="bi bi-trophy d-block"></i>
+                    <span class="d-none d-sm-block">Resume</span>
+                  </div>
+                  <div
+                    class="port-item p-4 bg-warning w-25"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#work"
+                  >
+                    <i class="bi bi-folder2-open d-block"></i>
+                    <span class="d-none d-sm-block">Work</span>
+                  </div>
+                  <div
+                    class="port-item p-4 bg-danger w-25"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#contact"
+                  >
+                    <i class="bi bi-envelope d-block"></i>
+                    <span class="d-none d-sm-block">Contact</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- FOOTER -->
+      <footer id="main-footer" class="p-5 bg-dark text-white">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#" class="btn btn-outline-light">
+              <i class="bi bi-cloud"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+      integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Gallery Modal
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("gallery-item")) {
+          const src = e.target.getAttribute("src");
+          document.querySelector(".modal-img").src = src;
+          const myModal = new bootstrap.Modal(
+            document.getElementById("gallery-popup")
+          );
+          myModal.show();
+        }
+      });
+    </script>
+  </body>
+</html>
