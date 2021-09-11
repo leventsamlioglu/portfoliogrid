@@ -1,0 +1,19 @@
+#main-header .port-item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.bg-black {
+  color: #fff;
+  background: #000;
+}
+
+@media (min-width: 1199px) {
+  .port-item {
+    padding: 4.2em !important;
+  }
+}
+
+.modal-content {
+  width: auto;
+}
